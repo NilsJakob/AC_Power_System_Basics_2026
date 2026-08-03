@@ -1,0 +1,661 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>AC Circuits &#8212; Electrical Power Systems Introduction</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/override.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '10_ac_circuits/ac_circuits';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Polyphase systems" href="../11_polyphase/polyphase_systems.html" />
+    <link rel="prev" title="Norton Equivalent" href="../09_norton/norton_eq.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Electrical Power Systems Introduction</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preface</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../00_preface/author.html">About the author</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_preface/preface.html">How to use this book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/build_vs_buy.html">Build vs. Buy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/power_system_data.html">Power System Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/A1_power_system_data.html">Assignment A1: Power System Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02_fundamentals/fundamentals.html">Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_circuits/representations.html">Basic representations</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../02_fundamentals/A2_fundamentals.html">Assignment A2: Fundamentals of Electrical Power Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_circuits/A3_basics.html">Assignment A3: Basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Electric circuits</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05_a_history_intro/electric_power_timeline.html">Laws in Electric Power Engineering – Timeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_basic_laws/basic_laws.html">Electric circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06_mesh/mesh_analysis.html">Mesh Analysis</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Circuit Theorems</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../07_circuit_theorems/intro_theorem.html">Circuit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08_thevenin/thevenin_eq.html">Thévenin Equivalent</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../09_norton/norton_eq.html">Norton Equivalent</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AC circuits</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">AC Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/polyphase_systems.html">Polyphase systems</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04_threephase/threephase.html">Three-Phase Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/perphase_eq.html">Per phase equivalent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/pu.html">Per unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/oneline.html">One-Line Diagram</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Referanser</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Referanser</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/10_ac_circuits/ac_circuits.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>AC Circuits</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notation-in-the-textbook-power-systems-analysis-by-grainger-and-stevenson">Notation in the textbook Power Systems Analysis by Grainger and Stevenson</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-numbers">Complex numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-power">Complex Power</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-triangle">Power triangle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-1">EXAMPLE 2.1</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ac-circuits">
+<h1>AC Circuits<a class="headerlink" href="#ac-circuits" title="Permalink to this heading">#</a></h1>
+<p>Earlier we discussed notation from IEEE and MKS and mentioned that In this book, we use MKS units and IEEE standards as far as possible. Some textbook use different notation.</p>
+<section id="notation-in-the-textbook-power-systems-analysis-by-grainger-and-stevenson">
+<h2>Notation in the textbook Power Systems Analysis by Grainger and Stevenson<a class="headerlink" href="#notation-in-the-textbook-power-systems-analysis-by-grainger-and-stevenson" title="Permalink to this heading">#</a></h2>
+<p><img alt="frontpagePSA" src="../_images/fp_grainger.png" /></p>
+<p>The phasor representations of sinusoidal voltages and currents uses notation of capital letters V and I to indicate phasors (using appropriate subscripts where necessary). To indicate the magnitude of these phasors, Grainger ad Stevenson use V and I enclosed by vertical bars (|V| and |I|) <span id="id1">[<a class="reference internal" href="../references.html#id3" title="John J. Grainger and William D. Stevenson. Power System Analysis. McGraw-Hill, New York, 2016. ISBN 9780070612938.">GS16</a>]</span>.</p>
+<p>Where a generated voltage, that is, an electromotive force (EMF), is specified, the letter E rather than V is often used for voltage to emphasize the fact that an EMF, rather than a general potential difference between two points, is being considered.</p>
+<div class="math notranslate nohighlight">
+\[ V = |V|\angle \alpha \quad \text{and}\quad  I = |I|\angle \beta \quad\text{and}\quad Z = |Z|\angle \theta\]</div>
+</section>
+<section id="complex-numbers">
+<h2>Complex numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this heading">#</a></h2>
+<p>A complex number may be represented in rectangular (Cartesian) or polar form (magnitude-angle). These representations are mathematically equivalent and can be converted using already mentioned Euler’s identity <span class="math notranslate nohighlight">\(e^{j\theta} = cos\theta+jsin\theta\)</span></p>
+<p>The impedance <span class="math notranslate nohighlight">\(Z = |Z|\angle \theta\)</span>, has a modulus and argument Z = R + jX,</p>
+<p>Complex Number: Z = R + jX</p>
+<p>Modulus (magnitude): <span class="math notranslate nohighlight">\(|Z| = \sqrt{R^2 + X^2}\)</span></p>
+<p>Argument: <span class="math notranslate nohighlight">\(\theta = tan^{-1}\bigg(\frac{X}{R}\bigg)\)</span></p>
+<p>Python Code:</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">86.6</span><span class="p">,</span> <span class="mi">50</span>
+
+<span class="n">mag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span><span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s1">)</span><span class="se">\n</span><span class="s1">|V|=</span><span class="si">{</span><span class="n">mag</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="se">\n</span><span class="s1">∠=</span><span class="si">{</span><span class="n">phase</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">°&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">,</span> <span class="s1">&#39;box&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Real&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Imaginary&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> 
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Magnitude = </span><span class="si">{</span><span class="n">mag</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Phase angle = </span><span class="si">{</span><span class="n">phase</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">°&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/23a22213d7227f92bf01dfd6ecb6159eb9d4ff6c6f22b850d28d02a755c3def6.png" src="../_images/23a22213d7227f92bf01dfd6ecb6159eb9d4ff6c6f22b850d28d02a755c3def6.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Magnitude = 100.00
+Phase angle = 30.00°
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the terminals of the loads are named <em>a</em> and <em>n</em>, and voltage and current are expressed as:</p>
+<div class="math notranslate nohighlight">
+\[v_{an} = V_{\max}\cos(\omega t) \qquad i_{an} = I_{\max}\cos(\omega t - \theta)\]</div>
+<p>Then the instantaneous power is:</p>
+<div class="math notranslate nohighlight">
+\[p = v_{an}i_{an} = V_{\max}I_{\max}\cos(\omega t)\cos(\omega t - \theta)\]</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/584bb50dff094585f1e51a5e7a25fb4f762b2b128d20af31c50436f2e53cdf6a.png" src="../_images/584bb50dff094585f1e51a5e7a25fb4f762b2b128d20af31c50436f2e53cdf6a.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Average Power = 187.49 W
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/80a8500d927db1b20ef5621fadaba061b9844a854762ccd6cce64cf957001714.png" src="../_images/80a8500d927db1b20ef5621fadaba061b9844a854762ccd6cce64cf957001714.png" />
+</div>
+</div>
+</section>
+<section id="complex-power">
+<h2>Complex Power<a class="headerlink" href="#complex-power" title="Permalink to this heading">#</a></h2>
+<p>Calculation of real and reactive by using complex form, we use complex conjugate, <span class="math notranslate nohighlight">\(Z^*\)</span>, because multiplying a complex number by its conjugate gives</p>
+<p>\begin{equation}
+zz^*=(a+jb)(a-jb)=a^2+b^2=|z|^2
+\end{equation}</p>
+<div class="math notranslate nohighlight">
+\[
+VI^{*}
+= |V|e^{j\alpha}\times|I|e^{-j\beta}
+= |V||I|e^{j(\alpha-\beta)}
+= |V||I|\angle(\alpha-\beta)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+S
+= VI^{*}
+= |V||I|\cos(\alpha-\beta)
++ j|V||I|\sin(\alpha-\beta)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+S = P + jQ
+\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[
+P = |V||I|\cos(\alpha-\beta)
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+Q = |V||I|\sin(\alpha-\beta).
+\]</div>
+</section>
+<section id="power-triangle">
+<h2>Power triangle<a class="headerlink" href="#power-triangle" title="Permalink to this heading">#</a></h2>
+<p>The power triangle depict the relation of <span class="math notranslate nohighlight">\(\frac{P}{|S|}\)</span> by the cosine to the angle between them, <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/0f33b513710f5ac412b65300d156416d49b2bf3263abcfe29f4e1642fc892436.png" src="../_images/0f33b513710f5ac412b65300d156416d49b2bf3263abcfe29f4e1642fc892436.png" />
+</div>
+</div>
+<section id="example-2-1">
+<h3>EXAMPLE 2.1<a class="headerlink" href="#example-2-1" title="Permalink to this heading">#</a></h3>
+<p>A 50-kW inductive load is operated at a lagging power factor of 0.8. The supply voltage is 220 V at 60 Hz. Determine the size of the required parallel capacitor to improve the overall power factor to 0.95 lagging.</p>
+<p><span class="math notranslate nohighlight">\(P = 50 kw\)</span></p>
+<p><span class="math notranslate nohighlight">\(PF_{old} = 0.8\)</span></p>
+<p><span class="math notranslate nohighlight">\(PF_{new} = 0.95\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+Q = P\tan(\theta).
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+Q_c = P\left[\tan(\theta_1)-\tan(\theta_2)\right]
+\]</div>
+<p>Knowing the size of the capacitor, <span class="math notranslate nohighlight">\(Q_c\)</span>, we know that:</p>
+<div class="math notranslate nohighlight">
+\[ |Q_c| = \frac{V^2}{X_C} \]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[ X_C = \frac{1}{2\pi fC} \]</div>
+<p>rearrange</p>
+<div class="math notranslate nohighlight">
+\[ C = \frac{Q_C}{2\pi fC} \]</div>
+<p>Below in Python code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="c1">#Variables</span>
+<span class="n">P</span> <span class="o">=</span> <span class="mi">50</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">3</span>          
+<span class="n">PF_old</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">PF_new</span> <span class="o">=</span> <span class="mf">0.95</span>
+
+<span class="c1"># calc</span>
+<span class="n">theta_old</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">PF_old</span><span class="p">))</span>
+<span class="n">theta_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">PF_new</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;theta_old = </span><span class="si">{</span><span class="n">theta_old</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> degrees&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;theta_new = </span><span class="si">{</span><span class="n">theta_new</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> degrees&quot;</span><span class="p">)</span>
+
+<span class="n">Q_c</span> <span class="o">=</span> <span class="n">P</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">theta_old</span><span class="p">))</span> <span class="o">-</span> <span class="n">P</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">theta_new</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Q_c = </span><span class="si">{</span><span class="n">Q_c</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> kVAr&quot;</span><span class="p">)</span>
+
+<span class="c1"># Given values</span>
+<span class="n">V</span> <span class="o">=</span> <span class="mi">220</span>         <span class="c1"># Volts</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mi">60</span>          <span class="c1"># Hz</span>
+
+<span class="c1"># Capacitance in Farads</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">Q_c</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">f</span> <span class="o">*</span> <span class="n">V</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Convert to mF</span>
+<span class="n">C_mF</span> <span class="o">=</span> <span class="n">C</span> <span class="o">*</span> <span class="mi">1000</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Capacitance = </span><span class="si">{</span><span class="n">C_mF</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> mF&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta_old = 36.87 degrees
+theta_new = 18.19 degrees
+Q_c = 21065.79 kVAr
+Capacitance = 1.1545 mF
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/b4ce2e0c4b0ee3b18952ab51f0ff80bac82d5fa5ca73fcd86bd5394cec3e90cc.png" src="../_images/b4ce2e0c4b0ee3b18952ab51f0ff80bac82d5fa5ca73fcd86bd5394cec3e90cc.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./10_ac_circuits"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Nils Jakob Johannesen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

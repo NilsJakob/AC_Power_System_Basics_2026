@@ -1,0 +1,602 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Per phase equivalent &#8212; Electrical Power Systems Introduction</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/override.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '11_polyphase/perphase_eq';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Per unit" href="pu.html" />
+    <link rel="prev" title="Three-Phase Circuits" href="../04_threephase/threephase.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Electrical Power Systems Introduction</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preface</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../00_preface/author.html">About the author</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_preface/preface.html">How to use this book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/build_vs_buy.html">Build vs. Buy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/power_system_data.html">Power System Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/A1_power_system_data.html">Assignment A1: Power System Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02_fundamentals/fundamentals.html">Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_circuits/representations.html">Basic representations</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../02_fundamentals/A2_fundamentals.html">Assignment A2: Fundamentals of Electrical Power Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_circuits/A3_basics.html">Assignment A3: Basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Electric circuits</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05_a_history_intro/electric_power_timeline.html">Laws in Electric Power Engineering – Timeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_basic_laws/basic_laws.html">Electric circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06_mesh/mesh_analysis.html">Mesh Analysis</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Circuit Theorems</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../07_circuit_theorems/intro_theorem.html">Circuit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08_thevenin/thevenin_eq.html">Thévenin Equivalent</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../09_norton/norton_eq.html">Norton Equivalent</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AC circuits</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../10_ac_circuits/ac_circuits.html">AC Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polyphase_systems.html">Polyphase systems</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04_threephase/threephase.html">Three-Phase Circuits</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Per phase equivalent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pu.html">Per unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oneline.html">One-Line Diagram</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Referanser</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Referanser</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/11_polyphase/perphase_eq.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Per phase equivalent</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impedance-equivalent">Impedance equivalent</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-4">EXAMPLE 2.4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-in-balanced-3-phase-circuits">Power in balanced 3-phase circuits</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="per-phase-equivalent">
+<h1>Per phase equivalent<a class="headerlink" href="#per-phase-equivalent" title="Permalink to this heading">#</a></h1>
+<p>Laods can be connected in Y- or <span class="math notranslate nohighlight">\(\Delta\)</span>-connection. Balanced loads are often connected in <span class="math notranslate nohighlight">\(\Delta\)</span></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/815238c6fe1277241c49febf19ee94234b3cedb4fef0a595992b7c0497b93d04.png" src="../_images/815238c6fe1277241c49febf19ee94234b3cedb4fef0a595992b7c0497b93d04.png" />
+</div>
+</div>
+<p>When analysing balanced 3-phase circuits it is not necessary to work with all 3 phases. We use a simplification of the 3-phases, represented with a per-phase equivalent. The per-phase equivalent consists of the voltage represented by its line-to-neutral potential, the line current, impedance (Y-connected) and a neutral connection of zero impedance. Then solve the circuit by KVL.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/7d0719c862310b63ce2176f028b382d0e9035dda6cc460eee69b6f9ba409c40c.png" src="../_images/7d0719c862310b63ce2176f028b382d0e9035dda6cc460eee69b6f9ba409c40c.png" />
+</div>
+</div>
+<section id="impedance-equivalent">
+<h2>Impedance equivalent<a class="headerlink" href="#impedance-equivalent" title="Permalink to this heading">#</a></h2>
+<p>It is imperative that the impedance is represented by its Y-connection in a per-phase equivalent. <span class="math notranslate nohighlight">\(\Delta\)</span>- and Y-connected impedances are equivalent and can be transformed.</p>
+<p>If we have a <span class="math notranslate nohighlight">\(\Delta\)</span>- connection it can be turned into Y-connection by:</p>
+<div class="math notranslate nohighlight">
+\[Z_Y = \frac{\text{product of adjacent}Z_{\Delta}s}{\text{sum of}Z_{\Delta}} \]</div>
+<p>If we have a Y- connection it can be turned into <span class="math notranslate nohighlight">\(\Delta\)</span>-connection by:</p>
+<div class="math notranslate nohighlight">
+\[Z_{\Delta} = \frac{\text{sum of pairwaise products of}Z_{Y}s}{\text{the opposite}Z_{Y}} \]</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/acca5af0082d09f8b9da5cdea0c5dc8ac24210e49e5029877c67f25a88cb55ba.png" src="../_images/acca5af0082d09f8b9da5cdea0c5dc8ac24210e49e5029877c67f25a88cb55ba.png" />
+</div>
+</div>
+<section id="example-2-4">
+<h3>EXAMPLE 2.4<a class="headerlink" href="#example-2-4" title="Permalink to this heading">#</a></h3>
+<p>The terminal voltage of a Y-connected load consisting of three equal impedances of <span class="math notranslate nohighlight">\(20\angle30^{\circ}\Omega\)</span> is 4.4 kV line to line. The impedance
+of each of the three lines connecting the load to a bus at a substation is <span class="math notranslate nohighlight">\(Z_L = 1.4\angle75^{\circ}\Omega\)</span>.</p>
+<p>Find the line-to-line voltage at the substation bus.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Load phase voltage = 2540.3 ∠0° V
+Load current = 127.0 ∠-30.0° A
+Line voltage drop = 177.8 ∠45.0° V
+Substation phase voltage = 2669.0 ∠2.7° V
+Substation line-line voltage = 4622.9 ∠32.7° V
+</pre></div>
+</div>
+<img alt="../_images/88912c84170aa232efc6f8c8692eab701bed80da7834de5571f84b996527ea64.png" src="../_images/88912c84170aa232efc6f8c8692eab701bed80da7834de5571f84b996527ea64.png" />
+<img alt="../_images/a057e4058af94e4f893ea07d045c4bb668759dda4db74966d77989658b3f8dfe.png" src="../_images/a057e4058af94e4f893ea07d045c4bb668759dda4db74966d77989658b3f8dfe.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="power-in-balanced-3-phase-circuits">
+<h2>Power in balanced 3-phase circuits<a class="headerlink" href="#power-in-balanced-3-phase-circuits" title="Permalink to this heading">#</a></h2>
+<p>If the magnitude of the voltages to neutral (V_p) for a Y-connected load is</p>
+<div class="math notranslate nohighlight">
+\[
+|V_p| = |V_{an}| = |V_{bn}| = |V_{cn}|
+\]</div>
+<p>and if the magnitude of the phase current (I_p) for a Y-connected load is</p>
+<div class="math notranslate nohighlight">
+\[
+|I_p| = |I_{an}| = |I_{bn}| = |I_{cn}|
+\]</div>
+<p>the total three-phase power is</p>
+<div class="math notranslate nohighlight">
+\[
+P = 3|V_p||I_p|\cos\theta_p
+\]</div>
+<p>where (\theta_p) is the angle by which the phase current (I_p) lags the phase voltage (V_p).</p>
+<p>The magnitudes of line-to-line voltage (V_L) and line current (I_L) are related by</p>
+<div class="math notranslate nohighlight">
+\[
+|V_p| = \frac{|V_L|}{\sqrt{3}}
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+|I_p| = |I_L|
+\]</div>
+<p>Substituting into the power equation gives</p>
+<div class="math notranslate nohighlight">
+\[
+P = \sqrt{3}|V_L||I_L|\cos\theta_p
+\]</div>
+<p>The total reactive power is</p>
+<div class="math notranslate nohighlight">
+\[
+Q = 3|V_p||I_p|\sin\theta_p
+\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[
+Q = \sqrt{3}|V_L||I_L|\sin\theta_p
+\]</div>
+<p>The apparent power is</p>
+<div class="math notranslate nohighlight">
+\[
+|S| = \sqrt{P^2 + Q^2}
+     = \sqrt{3}|V_L||I_L|
+\]</div>
+<p>For a (\Delta)-connected load,</p>
+<div class="math notranslate nohighlight">
+\[
+|V_p| = |V_L|
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+|I_p| = \frac{|I_L|}{\sqrt{3}}
+\]</div>
+<p>The total three-phase power is</p>
+<div class="math notranslate nohighlight">
+\[
+P = 3|V_p||I_p|\cos\theta_p
+\]</div>
+<p>Substituting the (\Delta)-connection relationships gives</p>
+<div class="math notranslate nohighlight">
+\[
+P = \sqrt{3}|V_L||I_L|\cos\theta_p
+\]</div>
+<p>Similarly,</p>
+<div class="math notranslate nohighlight">
+\[
+Q = \sqrt{3}|V_L||I_L|\sin\theta_p
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+|S| = \sqrt{3}|V_L||I_L|
+\]</div>
+<p>Thus, for balanced three-phase systems (whether Y-connected or (\Delta)-connected),</p>
+<div class="math notranslate nohighlight">
+\[
+P = \sqrt{3}|V_L||I_L|\cos\theta_p
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+Q = \sqrt{3}|V_L||I_L|\sin\theta_p
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+|S| = \sqrt{3}|V_L||I_L|
+\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./11_polyphase"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Nils Jakob Johannesen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

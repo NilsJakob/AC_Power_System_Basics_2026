@@ -1,0 +1,727 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Fundamentals &#8212; Electrical Power Systems Introduction</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/override.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_fundamentals/fundamentals';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Basic representations" href="../03_circuits/representations.html" />
+    <link rel="prev" title="Assignment A1: Power System Data" href="../01_introduction/A1_power_system_data.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Electrical Power Systems Introduction</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preface</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../00_preface/author.html">About the author</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_preface/preface.html">How to use this book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/build_vs_buy.html">Build vs. Buy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/power_system_data.html">Power System Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/A1_power_system_data.html">Assignment A1: Power System Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_circuits/representations.html">Basic representations</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="A2_fundamentals.html">Assignment A2: Fundamentals of Electrical Power Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_circuits/A3_basics.html">Assignment A3: Basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Electric circuits</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05_a_history_intro/electric_power_timeline.html">Laws in Electric Power Engineering – Timeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_basic_laws/basic_laws.html">Electric circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06_mesh/mesh_analysis.html">Mesh Analysis</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Circuit Theorems</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../07_circuit_theorems/intro_theorem.html">Circuit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08_thevenin/thevenin_eq.html">Thévenin Equivalent</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../09_norton/norton_eq.html">Norton Equivalent</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AC circuits</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../10_ac_circuits/ac_circuits.html">AC Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/polyphase_systems.html">Polyphase systems</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04_threephase/threephase.html">Three-Phase Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/perphase_eq.html">Per phase equivalent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/pu.html">Per unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/oneline.html">One-Line Diagram</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Referanser</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Referanser</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/02_fundamentals/fundamentals.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Fundamentals</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mks-system">The MKS System</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#per-unit-system">Per-Unit System</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-quantities">Base Quantities</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-and-phasors">Time Domain and Phasors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-waveform-and-rotating-vector-phasor">Time Domain (Waveform) and Rotating Vector (Phasor)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#result">Result:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#root-mean-square-rms">Root Mean Square (RMS)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell tag_remove-input tag_hide-input docutils container">
+<div class="cell_output docutils container">
+<script type="application/javascript">
+setTimeout(function() {
+    document.querySelectorAll('.jp-CodeCell').forEach(cell => {
+        if (cell.innerText.includes("# FEEDBACK CELL") ||
+            cell.innerText.includes("# SCORE CELL")) {
+
+            const btn = cell.querySelector('[title="Collapse Input"]');
+            if (btn) {
+                btn.click();
+            }
+        }
+    });
+}, 800);
+</script></div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="fundamentals">
+<h1>Fundamentals<a class="headerlink" href="#fundamentals" title="Permalink to this heading">#</a></h1>
+<p>Fundamental to electrical power systems, is to define the time aspect.</p>
+<p>We start with the generic sinusoidal function and recall Euler’s formula:</p>
+<div class="math notranslate nohighlight">
+\[
+e^{j\theta} = \cos\theta + j\sin\theta
+\]</div>
+<p>In this book, we use MKS units and IEEE standards as far as possible.</p>
+<section id="the-mks-system">
+<h2>The MKS System<a class="headerlink" href="#the-mks-system" title="Permalink to this heading">#</a></h2>
+<p>The meter–kilogram–second (MKS) system is a system of units where the fundamental units are:</p>
+<ul class="simple">
+<li><p>Length: meter (m)</p></li>
+<li><p>Mass: kilogram (kg)</p></li>
+<li><p>Time: second (s)</p></li>
+</ul>
+<p>MKS means that all physical quantities are constructed from meter, kilogram, and second, and this forms the basis of the SI units used in power systems.</p>
+<p>For example:</p>
+<div class="math notranslate nohighlight">
+\[
+1 \, V = \frac{kg \cdot m^2}{s^3 \cdot A}
+\]</div>
+<p>All physical quantities in power systems are expressed in SI units (MKS-based):</p>
+<ul class="simple">
+<li><p>Voltage: Volt</p></li>
+<li><p>Current: Ampere</p></li>
+<li><p>Power: Watt</p></li>
+<li><p>Impedance: Ohm</p></li>
+</ul>
+</section>
+<section id="per-unit-system">
+<h2>Per-Unit System<a class="headerlink" href="#per-unit-system" title="Permalink to this heading">#</a></h2>
+<p>The per-unit system normalizes MKS values by dividing by a chosen base value, producing dimensionless quantities:</p>
+<div class="math notranslate nohighlight">
+\[
+x_{pu} = \frac{x_{MKS}}{x_{base}}
+\]</div>
+<section id="base-quantities">
+<h3>Base Quantities<a class="headerlink" href="#base-quantities" title="Permalink to this heading">#</a></h3>
+<p>From the base values <span class="math notranslate nohighlight">\(S_{base}\)</span> (VA) and <span class="math notranslate nohighlight">\(V_{base}\)</span> (Volt), we can derive:</p>
+<div class="math notranslate nohighlight">
+\[
+I_{base} = \frac{S_{base}}{\sqrt{3} V_{base}}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+Z_{base} = \frac{V_{base}^2}{S_{base}}
+\]</div>
+</section>
+</section>
+<section id="time-domain-and-phasors">
+<h2>Time Domain and Phasors<a class="headerlink" href="#time-domain-and-phasors" title="Permalink to this heading">#</a></h2>
+<p>The time-domain representation of voltage can be expressed as:</p>
+<div class="math notranslate nohighlight">
+\[
+v(t) = \hat{V} \cdot \cos(\omega t)
+\]</div>
+<p>Lowercase letters (e.g., <span class="math notranslate nohighlight">\(v\)</span>) are used to represent instantaneous values that vary as a function of time (<span class="math notranslate nohighlight">\(t\)</span>), while uppercase letters (<span class="math notranslate nohighlight">\(V\)</span>) represent constant quantities.</p>
+<p>The representation of time-varying and constant quantities is not standardized in the same way as MKS, SI, and IEEE. Instead, it is based on conventions—agreements developed over time about how to express these quantities. This is also a good illustration of the difference between standards and conventions.</p>
+<p>Here:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\hat{V}\)</span> is the voltage amplitude</p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> is the frequency (typically 50 Hz, i.e., 50 cycles per second)</p></li>
+</ul>
+<p>In the Python script below, <code class="docutils literal notranslate"><span class="pre">V_ampl</span></code> represents the constant amplitude, while <span class="math notranslate nohighlight">\(v(t)\)</span> varies as a function of time.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Parameters</span>
+<span class="n">V_ampl</span> <span class="o">=</span> <span class="mi">325</span>            <span class="c1"># Peak voltage [V]</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mi">50</span>                 <span class="c1"># Frequency [Hz]</span>
+<span class="n">omega</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">f</span>      <span class="c1"># Angular frequency</span>
+<span class="n">theta_v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">6</span>     <span class="c1"># Phase angle (30 degrees)</span>
+
+<span class="c1"># Time vector</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># Voltage signal</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">V_ampl</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">omega</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="n">theta_v</span><span class="p">)</span>
+
+<span class="c1"># Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage v(t) [V]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$v(t) = \hat</span><span class="si">{V}</span><span class="s2"> cos(ωt)$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/9817c23bce50e4f4f960a75b85598a88ea0c20a5a1ac42458a2ad2fde04e1f7f.png" src="../_images/9817c23bce50e4f4f960a75b85598a88ea0c20a5a1ac42458a2ad2fde04e1f7f.png" />
+</div>
+</div>
+<p>In power systems, it is common to describe <span class="math notranslate nohighlight">\(\cos(\omega t)\)</span>, because this represents the projection of the voltage <span class="math notranslate nohighlight">\(v\)</span> onto the cosine axis and gives the value 1 when <span class="math notranslate nohighlight">\(v(t) = 0\)</span>. At that point, <span class="math notranslate nohighlight">\(v(0)\)</span> equals the constant <span class="math notranslate nohighlight">\(V\)</span>, which is the same as the amplitude <span class="math notranslate nohighlight">\(\hat{V}\)</span>.</p>
+<p>In this way, the cosine representation describes the system under continuous operation from a steady-state perspective. The steady-state perspective is also important when the vector (<span class="math notranslate nohighlight">\(V\)</span>) rotates in the time domain and becomes a phasor representation.</p>
+</section>
+<section id="time-domain-waveform-and-rotating-vector-phasor">
+<h2>Time Domain (Waveform) and Rotating Vector (Phasor)<a class="headerlink" href="#time-domain-waveform-and-rotating-vector-phasor" title="Permalink to this heading">#</a></h2>
+<p>The phasor representation becomes particularly useful when analyzing phase shifts, for example in three-phase systems or current phase shifts caused by passive components:</p>
+<div class="math notranslate nohighlight">
+\[
+v(t) = \hat{V} \cdot \sin(\omega t) \Longleftrightarrow \bar{V} = \hat{V} \angle \theta
+\]</div>
+<p><img alt="Phasor animation" src="../_images/phasor_animation_sin.gif" /></p>
+<p>We use the notation <span class="math notranslate nohighlight">\(\bar{V}\)</span> to indicate that this is a complex number with a magnitude (amplitude <span class="math notranslate nohighlight">\(\hat{V}\)</span>) and a phase (<span class="math notranslate nohighlight">\(\theta\)</span>). The magnitude is also called the absolute value <span class="math notranslate nohighlight">\(|V|\)</span>, while the phase is the argument of the complex number.</p>
+<p>In power systems, the convention is to use the cosine representation due to the steady-state perspective discussed above.</p>
+<p><img alt="Phasor animation" src="../_images/phasor_animation_fixed.gif" /></p>
+<div class="math notranslate nohighlight">
+\[
+\Re\{e^{j\omega t}\} = \cos(\omega t)
+\]</div>
+<ul class="simple">
+<li><p>no additional phase</p></li>
+<li><p>the phasor points along the x-axis at <span class="math notranslate nohighlight">\(t = 0\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\Im\{e^{j\omega t}\} = \sin(\omega t)
+\]</div>
+<p>However, in this case:</p>
+<ul class="simple">
+<li><p>at <span class="math notranslate nohighlight">\(t = 0\)</span>: value = 0</p></li>
+<li><p>you do not “see” the vector directly</p></li>
+</ul>
+<p>When using the real part:</p>
+<div class="math notranslate nohighlight">
+\[
+v(t) = \Re\{V e^{j\omega t}\}
+\]</div>
+<p>the relationship becomes:</p>
+<div class="math notranslate nohighlight">
+\[
+V = |V| e^{j\theta}
+\]</div>
+<p>completely direct.</p>
+<section id="result">
+<h3>Result:<a class="headerlink" href="#result" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+v(t) = |V| \cos(\omega t + \theta)
+\]</div>
+<ul class="simple">
+<li><p>the phase <span class="math notranslate nohighlight">\(\theta\)</span> is exactly the same as in the phasor</p></li>
+<li><p>no additional shift</p></li>
+</ul>
+<p>With sine, you must write:</p>
+<div class="math notranslate nohighlight">
+\[
+v(t) = |V| \sin(\omega t + \theta)
+\]</div>
+<p>which is actually:</p>
+<div class="math notranslate nohighlight">
+\[
+= |V| \cos(\omega t + \theta - 90^\circ)
+\]</div>
+<p>that is:</p>
+<div class="math notranslate nohighlight">
+\[
+V = |V| e^{j(\theta - 90^\circ)}
+\]</div>
+<p>View in animation:</p>
+<p><img alt="Phasor animation" src="../_images/complex_exponential_v2.gif" /></p>
+</section>
+</section>
+<section id="root-mean-square-rms">
+<h2>Root Mean Square (RMS)<a class="headerlink" href="#root-mean-square-rms" title="Permalink to this heading">#</a></h2>
+<p>RMS stands for “root mean square” and represents the effective value of a signal.</p>
+<p>For an alternating voltage, a simple average cannot be used because it becomes zero. Instead, we square the signal, take the average, and then take the square root. This yields a value equivalent to the DC voltage that would produce the same power.</p>
+<p>For a sinusoidal signal:</p>
+<div class="math notranslate nohighlight">
+\[
+V_{RMS} = \frac{\hat{V}}{\sqrt{2}}
+\]</div>
+<p>When we say 230 V in a power outlet, this refers to the RMS value—that is, the value that determines how much energy is delivered.</p>
+<p>The actual waveform is:</p>
+<div class="math notranslate nohighlight">
+\[
+v(t) = 325 \sin(\omega t)
+\]</div>
+<p>For a general signal <span class="math notranslate nohighlight">\(x(t)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+X_{RMS} = \sqrt{\frac{1}{T} \int_0^T x^2(t)\, dt}
+\]</div>
+<p>Thus, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[
+V_{RMS} = \frac{\hat{V}}{\sqrt{2}}, \quad
+I_{RMS} = \frac{\hat{I}}{\sqrt{2}}
+\]</div>
+<p>The voltage we measure is 230 V, but the amplitude is:</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{V} = V \cdot \sqrt{2} = 230 \cdot \sqrt{2} \approx 325 \text{ V}
+\]</div>
+<p>The term <span class="math notranslate nohighlight">\(\cos \theta\)</span> is used to describe phase shift, and if it is known, we can directly calculate power:</p>
+<div class="math notranslate nohighlight">
+\[
+P = V_{RMS} I_{RMS} \cos\theta
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Data</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="c1"># RMS value</span>
+<span class="n">v_rms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="c1"># Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Signal (sinus)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">v_rms</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;RMS-value&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="o">-</span><span class="n">v_rms</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Visualise RMS&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Save file</span>
+<span class="c1">#file_path = &#39;/mnt/data/rms_visualisering.png&#39;</span>
+<span class="c1">#plt.savefig(file_path)</span>
+<span class="c1">#plt.close()</span>
+
+<span class="c1">#file_path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/97ea2386877df252d276a5289a5c6e0c3814fe1ccec04875ef836ca5feed3ad7.png" src="../_images/97ea2386877df252d276a5289a5c6e0c3814fe1ccec04875ef836ca5feed3ad7.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./02_fundamentals"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Nils Jakob Johannesen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

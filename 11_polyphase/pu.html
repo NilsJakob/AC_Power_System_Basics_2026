@@ -1,0 +1,601 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Per unit &#8212; Electrical Power Systems Introduction</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/override.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '11_polyphase/pu';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="One-Line Diagram" href="oneline.html" />
+    <link rel="prev" title="Per phase equivalent" href="perphase_eq.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Electrical Power Systems Introduction</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preface</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../00_preface/author.html">About the author</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_preface/preface.html">How to use this book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/build_vs_buy.html">Build vs. Buy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/power_system_data.html">Power System Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/A1_power_system_data.html">Assignment A1: Power System Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02_fundamentals/fundamentals.html">Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_circuits/representations.html">Basic representations</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../02_fundamentals/A2_fundamentals.html">Assignment A2: Fundamentals of Electrical Power Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_circuits/A3_basics.html">Assignment A3: Basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Electric circuits</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05_a_history_intro/electric_power_timeline.html">Laws in Electric Power Engineering – Timeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_basic_laws/basic_laws.html">Electric circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06_mesh/mesh_analysis.html">Mesh Analysis</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Circuit Theorems</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../07_circuit_theorems/intro_theorem.html">Circuit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08_thevenin/thevenin_eq.html">Thévenin Equivalent</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../09_norton/norton_eq.html">Norton Equivalent</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AC circuits</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../10_ac_circuits/ac_circuits.html">AC Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polyphase_systems.html">Polyphase systems</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04_threephase/threephase.html">Three-Phase Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perphase_eq.html">Per phase equivalent</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Per unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oneline.html">One-Line Diagram</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Referanser</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Referanser</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/11_polyphase/pu.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Per unit</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-base-power-base-s-b">System Base/Power base (<span class="math notranslate nohighlight">\(S_b\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-base-v-b">Voltage base (<span class="math notranslate nohighlight">\(V_b\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-impedance">Base Impedance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#per-unit-impedance">Per-Unit Impedance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-6">EXAMPLE 2.6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-base-of-per-unit-quantities">Changing the Base of Per-Unit Quantities</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="per-unit">
+<h1>Per unit<a class="headerlink" href="#per-unit" title="Permalink to this heading">#</a></h1>
+<p>Per unit quantities, or pu for short, are non-dimensional units</p>
+<section id="system-base-power-base-s-b">
+<h2>System Base/Power base (<span class="math notranslate nohighlight">\(S_b\)</span>)<a class="headerlink" href="#system-base-power-base-s-b" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+S_{\text{base}}
+=
+\text{base MVA}_{3\phi}
+\]</div>
+</section>
+<section id="voltage-base-v-b">
+<h2>Voltage base (<span class="math notranslate nohighlight">\(V_b\)</span>)<a class="headerlink" href="#voltage-base-v-b" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+V_{\text{base}}
+= {\text{base voltage, kV}_{LL}}
+\]</div>
+</section>
+<section id="base-impedance">
+<h2>Base Impedance<a class="headerlink" href="#base-impedance" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+Z_{base} = \frac{V_{base}^2}{S_{base}} = \frac{\text{base voltage, k}V_{LL}^2}{\text{base MVA}_{3\phi}}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+Z_{base} = \frac{V_{base_{LN}}}{I_{base}}
+\]</div>
+</section>
+<section id="per-unit-impedance">
+<h2>Per-Unit Impedance<a class="headerlink" href="#per-unit-impedance" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+\text{Per-unit impedance of an element}
+=
+\frac{\text{actual impedance, }\Omega}
+{\text{base impedance, }\Omega}
+\]</div>
+</section>
+<section id="example-2-6">
+<h2>EXAMPLE 2.6<a class="headerlink" href="#example-2-6" title="Permalink to this heading">#</a></h2>
+<p>Solve example 2.4 by using per unit.
+The terminal voltage of a Y-connected load consisting of three equal impedances of <span class="math notranslate nohighlight">\(20\angle30^{\circ}\Omega\)</span> is 4.4 kV line to line. The impedance
+of each of the three lines connecting the load to a bus at a substation is <span class="math notranslate nohighlight">\(Z_L = 1.4\angle75^{\circ}\Omega\)</span>.</p>
+<p>Find the line-to-line voltage at the substation bus.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Load phase voltage = 2540.3 ∠0° V
+Load current = 127.0 ∠-30.0° A
+Line voltage drop = 177.8 ∠45.0° V
+Substation phase voltage = 2669.0 ∠2.7° V
+Substation line-line voltage = 4622.9 ∠32.7° V
+</pre></div>
+</div>
+<img alt="../_images/9ee5deab7723824ab92dbfd6b0473a575c731ae683b80e3dae93a4e052001cde.png" src="../_images/9ee5deab7723824ab92dbfd6b0473a575c731ae683b80e3dae93a4e052001cde.png" />
+<img alt="../_images/64dc3241abea5fc2ae9e3b6cc60c241239983cc97130bec7007edca70136585e.png" src="../_images/64dc3241abea5fc2ae9e3b6cc60c241239983cc97130bec7007edca70136585e.png" />
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Zbase = (4400/sqrt(3))/127 = 20.0027 Ω
+Base impedance is 20.0 Ω
+Z = ZL_cp/Zbase = 0.0700 ∠ 75.00° per unit
+The line impedance is 0.0700 ∠ 75.00° per unit
+Ian_pu = Ian/Ibase = 1.00 ∠ -30.00° per unit
+Van = 1 + Ian_pu*Z = 1.0507 ∠ 2.70° per unit
+The line-to-neutral voltage at the substation Van is 1.0507 per unit with angle 2.70°
+VLN = |Van| * Vbase/sqrt(3) = 2669.05 V
+The magnitude of line-to-neutral voltage at the substation bus is 2669.05 V
+VLL = |Van| * Vbase = 4622.92 V
+The magnitude of line-to-line voltage at the substation bus is 4622.92 V
+</pre></div>
+</div>
+<img alt="../_images/4829620fb4bc6eabf53ad2775badc0645a4def3525b98d8cbd34af3c6b3396f5.png" src="../_images/4829620fb4bc6eabf53ad2775badc0645a4def3525b98d8cbd34af3c6b3396f5.png" />
+</div>
+</div>
+</section>
+<section id="changing-the-base-of-per-unit-quantities">
+<h2>Changing the Base of Per-Unit Quantities<a class="headerlink" href="#changing-the-base-of-per-unit-quantities" title="Permalink to this heading">#</a></h2>
+<p>To change from per-unit impedance on a given base to per-unit impedance on a new
+base, the following equation applies:</p>
+<div class="math notranslate nohighlight">
+\[
+Z_{pu_{new}} = Z_{pu_{given}} \bigg(\frac{base kV_{given}}{base kV_{new}}\bigg)^2 \bigg(\frac{base MVA_{new}}{base MVA_{given}}\bigg)
+\]</div>
+<p>Per-Unit Reactance Base Conversion</p>
+<p>The reactance of a generator designated X″ is given as 0.25 per unit based on
+the generator’s nameplate rating of 18 kV, 500 MVA. The base for calculations
+is 20 kV, 100 MVA. Find X″ on the new base.</p>
+<p>Given:
+X_old = 0.25 p.u.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>S_old = 500 MVA
+
+V_old = 18 kV
+
+S_new = 100 MVA
+
+V_new = 20 kV
+</pre></div>
+</div>
+<p>Formula:
+X_new = X_old * (V_old / V_new)^2 * (S_new / S_old)
+$<span class="math notranslate nohighlight">\(
+X_{pu_{new}} = X_{pu_{given}} \bigg(\frac{V_{given}}{V_{new}}\bigg)^2 \bigg(\frac{S_{new}}{S_{given}}\bigg)
+\)</span>$
+Calculation:
+X_new = 0.25* (18 / 20)^2  * (100 / 500)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>X_new = 0.25 * 0.2 * 0.81
+
+X_new = 0.0405 p.u.
+</pre></div>
+</div>
+<p>Answer:
+X’’ on the new base (20 kV, 100 MVA) = 0.0405 p.u.</p>
+<p>Python Code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_old</span> <span class="o">=</span> <span class="mf">0.25</span>
+<span class="n">S_old</span> <span class="o">=</span> <span class="mf">500.0</span>
+<span class="n">V_old</span> <span class="o">=</span> <span class="mf">18.0</span>
+
+<span class="n">S_new</span> <span class="o">=</span> <span class="mf">100.0</span>
+<span class="n">V_new</span> <span class="o">=</span> <span class="mf">20.0</span>
+
+<span class="n">X_new</span> <span class="o">=</span> <span class="n">X_old</span>  <span class="o">*</span> <span class="p">(</span><span class="n">V_old</span> <span class="o">/</span> <span class="n">V_new</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">S_new</span> <span class="o">/</span> <span class="n">S_old</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;New reactance = </span><span class="si">{</span><span class="n">X_new</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> p.u.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>New reactance = 0.0405 p.u.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./11_polyphase"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Nils Jakob Johannesen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
