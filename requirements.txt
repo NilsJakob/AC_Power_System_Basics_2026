@@ -1,0 +1,9 @@
+jupyter-book==0.15.1
+schemdraw
+pandas
+matplotlib
+numpy
+jupyter
+nbconvert
+notebook
+geopandas

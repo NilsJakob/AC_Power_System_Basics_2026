@@ -1,0 +1,33 @@
+# Virtual environments
+jb-env/
+jb-env310/
+venv/
+.env/
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter Book build output
+_build/
+
+
+# Instructor content (contains solutions)
+nbgrader/**/source/
+
+
+# Generated student version
+nbgrader/**/release/
+
+
+# Student submissions (local only)
+nbgrader/**/submitted/
+
+# Autograding output
+nbgrader/**/autograded/
+
+# Database
+nbgrader/**/gradebook.db
+
+# Checkpoints
+.ipynb_checkpoints/

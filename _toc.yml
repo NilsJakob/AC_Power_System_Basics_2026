@@ -1,0 +1,52 @@
+format: jb-book
+root: index
+
+options:
+  numbered: true
+
+parts:
+  - caption: Preface
+    chapters:
+      - file: 00_preface/author
+      - file: 00_preface/preface
+      
+
+  - caption: Introduction
+    chapters:
+      - file: 01_introduction/build_vs_buy
+      - file: 01_introduction/introduction
+      - file: 01_introduction/power_system_data
+      - file: 01_introduction/A1_power_system_data
+
+  - caption: Fundamentals
+    chapters:
+      - file: 02_fundamentals/fundamentals
+      - file: 03_circuits/representations      
+      - file: 02_fundamentals/A2_fundamentals
+      - file: 03_circuits/A3_basics
+      #- file: 04_threephase/A4_three_phase
+
+  - caption: Electric circuits
+    chapters:
+      - file: 05_a_history_intro/electric_power_timeline
+      - file: 05_basic_laws/basic_laws
+      - file: 06_mesh/mesh_analysis
+
+  - caption: Circuit Theorems
+    chapters: 
+      - file: 07_circuit_theorems/intro_theorem
+      - file: 08_thevenin/thevenin_eq
+      - file: 09_norton/norton_eq
+
+  - caption: AC circuits
+    chapters:
+      - file: 10_ac_circuits/ac_circuits
+      - file: 11_polyphase/polyphase_systems
+      - file: 04_threephase/threephase
+      - file: 11_polyphase/perphase_eq
+      - file: 11_polyphase/pu
+      - file: 11_polyphase/oneline
+
+  - caption: Referanser
+    chapters:
+      - file: references
