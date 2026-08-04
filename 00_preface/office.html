@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Norton Equivalent &#8212; Electrical Power Systems Introduction</title>
+    <title>My office &#8212; Electrical Power Systems Introduction</title>
   
   
   
@@ -65,13 +65,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '09_norton/norton_eq';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '00_preface/office';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="AC Circuits" href="../10_ac_circuits/ac_circuits.html" />
-    <link rel="prev" title="Thévenin Equivalent" href="../08_thevenin/thevenin_eq.html" />
+    <link rel="next" title="How to use this book" href="preface.html" />
+    <link rel="prev" title="About the author" href="author.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -165,10 +163,10 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preface</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../00_preface/author.html">About the author</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../00_preface/office.html">My office</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../00_preface/preface.html">How to use this book</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="author.html">About the author</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">My office</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">How to use this book</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
@@ -193,12 +191,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../06_mesh/mesh_analysis.html">Mesh Analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Circuit Theorems</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../07_circuit_theorems/intro_theorem.html">Circuit Theorems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../08_thevenin/thevenin_eq.html">Thévenin Equivalent</a></li>
 
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Norton Equivalent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09_norton/norton_eq.html">Norton Equivalent</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">AC circuits</span></p>
 <ul class="nav bd-sidenav">
@@ -267,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/09_norton/norton_eq.ipynb" target="_blank"
+      <li><a href="../_sources/00_preface/office.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -349,7 +347,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Norton Equivalent</h1>
+    <h1>My office</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -363,43 +361,30 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="norton-equivalent">
-<h1>Norton Equivalent<a class="headerlink" href="#norton-equivalent" title="Permalink to this heading">#</a></h1>
-<p>The American Engineer, E. L. Norton published in 1926 a theorem similar to <em>Thévenin’s Theorem</em>, which he called <em>Norton’s Theorem</em> <span id="id1">[<a class="reference internal" href="../references.html#id2" title="Charles K. Alexander and Matthew N. O. Sadiku. Fundamentals of Electric Circuits. McGraw-Hill Education, 5 edition, 2013. ISBN 9780078028229.">AS13</a>]</span>.</p>
-<p>The Norton resistance <span class="math notranslate nohighlight">\(R_N\)</span> equals the Thevenin resistance <span class="math notranslate nohighlight">\(R_{TH}\)</span>, and can be found in the same way.</p>
-<div class="math notranslate nohighlight">
-\[R_N = R_{TH}\]</div>
-<p>A linear two terminal circuit in the figure nelow represents a one port (two terminal) network.</p>
-<p>The voltage of the port is <span class="math notranslate nohighlight">\(V_{ab} = V_a - V_b\)</span> and the current entering the port is <span class="math notranslate nohighlight">\(i_{ab}\)</span>
-When the terminals are shorted, <span class="math notranslate nohighlight">\(V_{ab}=0\)</span> and the resulting current is the short-circuit current</p>
-<div class="math notranslate nohighlight">
-\[i_{sc} = I_N\]</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="../_images/2ec460493c416010c2a62ed936f0540bdd3701460a8da274520b35f8c5165492.png" src="../_images/2ec460493c416010c2a62ed936f0540bdd3701460a8da274520b35f8c5165492.png" />
-</div>
-</div>
-<p>You do not know what is inside.
-If we only have access to terminals a and b, the admittance, Y <span class="math notranslate nohighlight">\(\big(=\frac{1}{Z}\big)\)</span>, can be determined by:</p>
-<ul class="simple">
-<li><p>Apply a voltage V between a and b.</p></li>
-<li><p>Measure the current I flowing into the circuit.</p></li>
-</ul>
-<p>Compute</p>
-<div class="math notranslate nohighlight">
-\[Y=\frac{I}{V}\]</div>
-<p>That ratio is the input admittance or driving-point admittance.</p>
-<p>If we already have found the Thévenin equivalent circuit, a Norton equivalent can be found by source transformation.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Two</span> <span class="n">sources</span> <span class="p">(</span><span class="ow">or</span> <span class="n">circuits</span> <span class="ow">in</span> <span class="n">general</span><span class="p">)</span> 
-<span class="n">are</span> <span class="n">said</span> <span class="n">to</span> <span class="n">be</span> <span class="n">equivalent</span>
-<span class="k">if</span> <span class="n">they</span> <span class="n">have</span> <span class="n">the</span> <span class="n">same</span> <span class="n">i</span><span class="o">-</span><span class="n">v</span> <span class="n">relationship</span>
-<span class="n">at</span> <span class="n">a</span> <span class="n">pair</span> <span class="n">of</span> <span class="n">terminals</span><span class="o">.</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="my-office">
+<h1>My office<a class="headerlink" href="#my-office" title="Permalink to this heading">#</a></h1>
+<p>My office is on the 2nd floor in the B-building, just above Café Origo.</p>
+<p>Cantact me:</p>
+<p>📧nils.j.johannesen&#64;usn.no</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">IFrame</span>
+
+<span class="n">IFrame</span><span class="p">(</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://use.mazemap.com/embed.html#v=1&amp;config=USN&amp;campusid=917&amp;zlevel=2&amp;center=9.671856,59.137732&amp;zoom=16.6&amp;sharepoitype=poi&amp;sharepoi=1001503189&amp;utm_medium=iframe&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span> <span class="p">)</span>
 </pre></div>
 </div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="../_images/18679c95908dbaf131d94a59cfc6aa911ca170922c7b1387a836110d5fb6612d.png" src="../_images/18679c95908dbaf131d94a59cfc6aa911ca170922c7b1387a836110d5fb6612d.png" />
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="900"
+            height="500"
+            src="https://use.mazemap.com/embed.html#v=1&config=USN&campusid=917&zlevel=2&center=9.671856,59.137732&zoom=16.6&sharepoitype=poi&sharepoi=1001503189&utm_medium=iframe"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
 </div>
 </section>
 
@@ -416,7 +401,7 @@ If we only have access to terminals a and b, the admittance, Y <span class="math
         },
         kernelOptions: {
             name: "python3",
-            path: "./09_norton"
+            path: "./00_preface"
         },
         predefinedOutput: true
     }
