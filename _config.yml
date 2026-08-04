@@ -1,4 +1,4 @@
-title: Electrical Power Systems Introduction
+title: AC Power System Basics 2026
 author: Nils Jakob Johannesen
 copyright: "2026"
 
@@ -8,7 +8,7 @@ execute:
 only_build_toc_files: true
 
 repository:
-  url: https://github.com/nilsjakob/power_systems_intro-book
+  url: https://github.com/NilsJakob/AC_Power_System_Basics_2026
   branch: main
   path_to_book: ""
 

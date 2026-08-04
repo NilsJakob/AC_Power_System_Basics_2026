@@ -1,5 +1,5 @@
 
-# Referanser
+# References
 
 ```{bibliography}
 :all:
