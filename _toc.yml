@@ -17,7 +17,7 @@ parts:
       - file: 01_introduction/build_vs_buy
       - file: 01_introduction/introduction
       - file: 01_introduction/power_system_data
-      - file: 01_introduction/A1_power_system_data
+      #- file: 01_introduction/A1_power_system_data
 
   - caption: Fundamentals
     chapters:
