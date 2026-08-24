@@ -23,8 +23,8 @@ parts:
     chapters:
       - file: 02_fundamentals/fundamentals
       - file: 03_circuits/representations      
-      - file: 02_fundamentals/A2_fundamentals
-      - file: 03_circuits/A3_basics
+      #- file: 02_fundamentals/A2_fundamentals
+      #- file: 03_circuits/A3_basics
       #- file: 04_threephase/A4_three_phase
 
   - caption: Electric circuits
