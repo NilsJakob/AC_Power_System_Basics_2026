@@ -25,6 +25,11 @@ sphinx:
   config:
     nb_remove_input: false
     nb_remove_cell_tags: ["remove-input"]
+
+    html_extra_path:
+      - Lectures
+      - images
+      
     html_theme_options:
       show_prev_next: false
       secondary_sidebar_items: []

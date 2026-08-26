@@ -7,6 +7,7 @@ options:
 parts:
   - caption: Preface
     chapters:
+      - file: 00_preface/lecture_slides
       - file: 00_preface/author
       - file: 00_preface/office
       - file: 00_preface/preface
